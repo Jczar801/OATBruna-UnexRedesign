@@ -125,4 +125,4 @@ npm run build     # build de produção em /dist
 
 ## Deploy
 
-Build gerado em `dist/`, pronto para publicar em Vercel, Netlify ou GitHub Pages.
+https://oat-bruna-unex-redesign.vercel.app/
