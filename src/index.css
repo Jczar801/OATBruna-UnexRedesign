@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Sora", sans-serif;
+  --font-body: "Inter", sans-serif;
+
+  --color-navy: #0e1330;
+  --color-navy-soft: #171d3f;
+  --color-paper: #faf9f5;
+  --color-ink: #23263a;
+  --color-slate: #5a5f78;
+  --color-green: #2fbd6b;
+  --color-green-deep: #1f8f50;
+  --color-clay: #c97a3d;
+  --color-line: #e4e2da;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--color-ink);
+  background: var(--color-paper);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-green-deep);
+  outline-offset: 3px;
+}
