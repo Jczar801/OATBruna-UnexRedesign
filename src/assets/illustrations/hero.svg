@@ -1,0 +1,65 @@
+<svg viewBox="0 0 640 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="heroSky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#171d3f"/>
+      <stop offset="100%" stop-color="#0e1330"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="800" fill="url(#heroSky)"/>
+
+  <!-- sol/arco clay -->
+  <circle cx="470" cy="200" r="130" fill="#c97a3d" opacity="0.9"/>
+  <circle cx="470" cy="200" r="130" fill="none" stroke="#faf9f5" stroke-width="1.5" opacity="0.15"/>
+
+  <!-- linha do horizonte -->
+  <path d="M0 520 Q 320 470 640 520 L640 800 L0 800 Z" fill="#171d3f"/>
+  <path d="M0 560 Q 320 515 640 560 L640 800 L0 800 Z" fill="#0e1330"/>
+
+  <!-- predio campus -->
+  <rect x="70" y="430" width="130" height="150" rx="6" fill="#faf9f5" opacity="0.06"/>
+  <rect x="90" y="455" width="24" height="34" rx="2" fill="#2fbd6b" opacity="0.5"/>
+  <rect x="130" y="455" width="24" height="34" rx="2" fill="#2fbd6b" opacity="0.5"/>
+  <rect x="170" y="455" width="24" height="34" rx="2" fill="#2fbd6b" opacity="0.5"/>
+  <rect x="90" y="500" width="24" height="34" rx="2" fill="#2fbd6b" opacity="0.3"/>
+  <rect x="130" y="500" width="24" height="34" rx="2" fill="#2fbd6b" opacity="0.3"/>
+  <rect x="170" y="500" width="24" height="34" rx="2" fill="#2fbd6b" opacity="0.3"/>
+
+  <rect x="440" y="470" width="110" height="110" rx="6" fill="#faf9f5" opacity="0.05"/>
+
+  <!-- folhagem estilizada (Bahia) -->
+  <path d="M40 580 Q 10 480 70 440 Q 60 520 90 560 Q 40 560 40 580Z" fill="#1f8f50" opacity="0.55"/>
+  <path d="M580 600 Q 630 520 600 460 Q 590 540 550 570 Q 580 580 580 600Z" fill="#1f8f50" opacity="0.5"/>
+
+  <!-- figuras formatura -->
+  <g transform="translate(230,540)">
+    <circle cx="0" cy="0" r="26" fill="#faf9f5"/>
+    <path d="M-30 40 Q 0 10 30 40 L30 120 L-30 120 Z" fill="#2fbd6b"/>
+    <path d="M-34 -6 L0 -22 L34 -6 L0 8 Z" fill="#0e1330"/>
+    <line x1="30" y1="-8" x2="30" y2="22" stroke="#0e1330" stroke-width="2"/>
+    <circle cx="30" cy="24" r="3" fill="#c97a3d"/>
+  </g>
+
+  <g transform="translate(330,560)">
+    <circle cx="0" cy="0" r="30" fill="#faf9f5"/>
+    <path d="M-34 46 Q 0 12 34 46 L34 140 L-34 140 Z" fill="#c97a3d"/>
+    <path d="M-38 -8 L0 -26 L38 -8 L0 10 Z" fill="#0e1330"/>
+    <line x1="34" y1="-10" x2="34" y2="26" stroke="#0e1330" stroke-width="2"/>
+    <circle cx="34" cy="28" r="3.5" fill="#2fbd6b"/>
+  </g>
+
+  <g transform="translate(420,548)">
+    <circle cx="0" cy="0" r="24" fill="#faf9f5"/>
+    <path d="M-27 38 Q 0 10 27 38 L27 112 L-27 112 Z" fill="#171d3f"/>
+    <path d="M-31 -6 L0 -21 L31 -6 L0 7 Z" fill="#2fbd6b"/>
+    <line x1="27" y1="-8" x2="27" y2="20" stroke="#2fbd6b" stroke-width="2"/>
+    <circle cx="27" cy="22" r="3" fill="#faf9f5"/>
+  </g>
+
+  <!-- confete -->
+  <circle cx="150" cy="180" r="4" fill="#2fbd6b"/>
+  <circle cx="510" cy="360" r="4" fill="#faf9f5" opacity="0.6"/>
+  <rect x="200" y="140" width="8" height="8" fill="#c97a3d" transform="rotate(20 204 144)"/>
+  <rect x="480" y="120" width="8" height="8" fill="#2fbd6b" transform="rotate(-15 484 124)"/>
+  <circle cx="90" cy="330" r="3" fill="#c97a3d"/>
+  <circle cx="380" cy="150" r="3.5" fill="#faf9f5" opacity="0.5"/>
+</svg>
