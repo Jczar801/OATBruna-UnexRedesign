@@ -2,6 +2,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Sobre from "./components/Sobre";
 import Cursos from "./components/Cursos";
+import RecomendacaoIA from "./components/RecomendacaoIA";
 import Depoimentos from "./components/Depoimentos";
 import Unidades from "./components/Unidades";
 import Noticias from "./components/Noticias";
@@ -16,6 +17,7 @@ export default function App() {
         <Hero />
         <Sobre />
         <Cursos />
+        <RecomendacaoIA />
         <Depoimentos />
         <Unidades />
         <Noticias />
