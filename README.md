@@ -119,10 +119,31 @@ Cada seção é um componente isolado e sem estado compartilhado, exceto `Navbar
 
 ```bash
 npm install
-npm run dev       # ambiente de desenvolvimento
+npm run dev       # ambiente de desenvolvimento (só frontend)
 npm run build     # build de produção em /dist
+```
+
+## Funcionalidade de IA (recomendação personalizada)
+
+O projeto inclui uma seção "Descubra o curso ideal para você" com recomendação
+gerada por IA (Google Gemini), via uma Serverless Function em `api/gerar-recomendacao.js`.
+Detalhes completos (opção escolhida, provedor, arquitetura, trechos de código,
+dificuldades e melhorias futuras) estão em [`DOCUMENTACAO-IA.md`](./DOCUMENTACAO-IA.md).
+
+Para testar essa parte localmente (o `npm run dev` sozinho não sobe a função de
+backend):
+
+```bash
+npm install -g vercel   # se ainda não tiver a CLI da Vercel
+cp .env.example .env.local
+# edite .env.local e cole sua chave gratuita gerada em
+# https://aistudio.google.com/app/apikey
+vercel dev
 ```
 
 ## Deploy
 
 Build gerado em `dist/`, pronto para publicar em Vercel, Netlify ou GitHub Pages.
+Para a funcionalidade de IA funcionar em produção, configure a variável de ambiente
+`GEMINI_API_KEY` no painel do projeto na Vercel (Settings → Environment Variables) —
+nunca no código-fonte.
