@@ -117,10 +117,7 @@ gerado por IA"**, atendendo à exigência de transparência com o usuário final
 
 ## 5. Print da funcionalidade em funcionamento
 
-> ⚠️ Espaço reservado — inserir aqui um print da seção "Descubra o curso ideal para
-> você" em funcionamento (formulário preenchido + recomendação gerada), depois de
-> configurar a `GEMINI_API_KEY` e testar localmente com `vercel dev` ou no ambiente
-> publicado.
+![Recomendação gerada por IA](./print-recomendacao-ia.png)
 
 ## 6. Dificuldades encontradas e soluções aplicadas
 
