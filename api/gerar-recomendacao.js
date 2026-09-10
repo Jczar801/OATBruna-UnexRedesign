@@ -33,6 +33,31 @@ Regras:
 - Termine sugerindo o próximo passo (ex.: falar com a Central do Candidato).`;
 }
 
+function esperar(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+function ehErroTemporario(err) {
+  // 503 = modelo sobrecarregado, 429 = limite de requisições atingido —
+  // ambos costumam se resolver sozinhos em segundos.
+  return err?.status === 503 || err?.status === 429;
+}
+
+async function gerarComRetentativa(model, prompt, tentativas = 3) {
+  for (let i = 1; i <= tentativas; i++) {
+    try {
+      const resultado = await model.generateContent(prompt);
+      return resultado.response.text();
+    } catch (err) {
+      const ultimaTentativa = i === tentativas;
+      if (!ehErroTemporario(err) || ultimaTentativa) throw err;
+
+      // espera crescente entre tentativas (backoff): 600ms, depois 1200ms
+      await esperar(600 * i);
+    }
+  }
+}
+
 export default async function handler(req, res) {
   if (req.method !== "POST") {
     res.setHeader("Allow", "POST");
@@ -58,15 +83,19 @@ export default async function handler(req, res) {
     }
 
     const genAI = new GoogleGenerativeAI(apiKey);
-    const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
+    const model = genAI.getGenerativeModel({ model: "gemini-3.6-flash" });
 
     const prompt = montarPrompt(perfil);
-    const resultado = await model.generateContent(prompt);
-    const texto = resultado.response.text();
+    const texto = await gerarComRetentativa(model, prompt);
 
     return res.status(200).json({ texto });
   } catch (err) {
     console.error("Erro ao chamar o Gemini:", err);
-    return res.status(502).json({ erro: "Não foi possível gerar a recomendação agora. Tente novamente em instantes." });
+    const sobrecarregado = ehErroTemporario(err);
+    return res.status(502).json({
+      erro: sobrecarregado
+        ? "O serviço de IA está com muita procura no momento. Tentamos algumas vezes automaticamente — tente de novo em instantes."
+        : "Não foi possível gerar a recomendação agora. Tente novamente em instantes.",
+    });
   }
 }

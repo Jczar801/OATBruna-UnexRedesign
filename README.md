@@ -143,7 +143,4 @@ vercel dev
 
 ## Deploy
 
-Build gerado em `dist/`, pronto para publicar em Vercel, Netlify ou GitHub Pages.
-Para a funcionalidade de IA funcionar em produção, configure a variável de ambiente
-`GEMINI_API_KEY` no painel do projeto na Vercel (Settings → Environment Variables) —
-nunca no código-fonte.
+``` Site publicado: https://oat-bruna-unex-redesign.vercel.app/ Build gerado em `dist/`, pronto para publicar em Vercel, Netlify ou GitHub Pages. Para a funcionalidade de IA funcionar em produção, configure a variável de ambiente `GEMINI_API_KEY` no painel do projeto na Vercel (Settings → Environment Variables) — nunca no código-fonte. ``` 

@@ -1,4 +1,5 @@
-import { ArrowRight, GraduationCap } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import heroImg from "../assets/illustrations/hero.svg";
 
 const ATALHOS = [
   { label: "Usar nota do Enem", href: "#servicos" },
@@ -39,8 +40,12 @@ export default function Hero() {
         </div>
 
         <div className="relative">
-          <div className="aspect-[4/5] rounded-2xl bg-navy-soft border border-white/10 flex items-center justify-center overflow-hidden">
-            <GraduationCap size={64} className="text-green/40" strokeWidth={1} />
+          <div className="aspect-[4/5] rounded-2xl bg-navy-soft border border-white/10 overflow-hidden">
+            <img
+              src={heroImg}
+              alt="Ilustração de formatura na Unex, com estudantes em beca em frente ao campus"
+              className="w-full h-full object-cover"
+            />
           </div>
           <div className="absolute -bottom-5 -left-5 bg-paper text-ink rounded-xl px-5 py-4 shadow-lg border border-line hidden sm:block">
             <p className="font-display font-bold text-2xl text-navy leading-none">4.200+</p>
