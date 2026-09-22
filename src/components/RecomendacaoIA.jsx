@@ -2,11 +2,21 @@ import { useState } from "react";
 import { Sparkles, Loader2 } from "lucide-react";
 
 const CURSOS_INTERESSE = [
-  "Medicina",
-  "Direito",
-  "Odontologia",
-  "Enfermagem",
+  "Administração",
+  "Biomedicina",
   "Ciências Contábeis",
+  "Direito",
+  "Educação Física",
+  "Enfermagem",
+  "Engenharia Civil",
+  "Farmácia",
+  "Fisioterapia",
+  "Medicina",
+  "Medicina Veterinária",
+  "Nutrição",
+  "Odontologia",
+  "Psicologia",
+  "Sistemas de Informação",
   "Ainda não sei",
 ];
 
