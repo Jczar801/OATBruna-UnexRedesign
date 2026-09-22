@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   Stethoscope,
   Scale,
@@ -14,6 +15,8 @@ import {
   Apple,
   Brain,
   Laptop,
+  ChevronDown,
+  ChevronUp,
 } from "lucide-react";
 import imgMedicina from "../assets/illustrations/course-medicina.svg";
 import imgDireito from "../assets/illustrations/course-direito.svg";
@@ -39,7 +42,13 @@ const CURSOS = [
   { nome: "Sistemas de Informação", duracao: "4 anos", icon: Laptop },
 ];
 
+const VISIVEIS_INICIALMENTE = 5;
+
 export default function Cursos() {
+  const [expandido, setExpandido] = useState(false);
+  const cursosExibidos = expandido ? CURSOS : CURSOS.slice(0, VISIVEIS_INICIALMENTE);
+  const temMais = CURSOS.length > VISIVEIS_INICIALMENTE;
+
   return (
     <section id="cursos" className="bg-white border-y border-line">
       <div className="mx-auto max-w-6xl px-6 py-20">
@@ -51,7 +60,7 @@ export default function Cursos() {
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-5">
-          {CURSOS.map(({ nome, duracao, icon: Icon, img }) => (
+          {cursosExibidos.map(({ nome, duracao, icon: Icon, img }) => (
             <a
               href="#servicos"
               key={nome}
@@ -80,6 +89,29 @@ export default function Cursos() {
             </a>
           ))}
         </div>
+
+        {temMais && (
+          <div className="mt-8 flex justify-center">
+            <button
+              type="button"
+              onClick={() => setExpandido((v) => !v)}
+              aria-expanded={expandido}
+              className="inline-flex items-center gap-1.5 rounded-full border border-line px-5 py-2.5 text-sm font-semibold text-navy hover:border-navy transition-colors"
+            >
+              {expandido ? (
+                <>
+                  Ver menos
+                  <ChevronUp size={16} />
+                </>
+              ) : (
+                <>
+                  Ver mais cursos
+                  <ChevronDown size={16} />
+                </>
+              )}
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );

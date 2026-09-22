@@ -52,8 +52,10 @@ export default function Navbar() {
       <div className="mx-auto max-w-6xl px-6 flex items-center justify-between py-4">
         <div className="flex items-center gap-4 shrink-0">
           <a href="#topo" className="flex items-center gap-2">
-            <svg width="34" height="30" viewBox="0 0 34 30" fill="none" aria-hidden="true">
-              <path d="M2 2 L17 28 L32 2" stroke="#2FBD6B" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+            <svg width="34" height="34" viewBox="0 0 100 100" aria-hidden="true">
+              <rect width="100" height="100" rx="22" fill="#0E1330" />
+              <polygon points="24,22 54,50 24,78 36,50" fill="#2FBD6B" />
+              <polygon points="76,22 46,50 76,78 64,50" fill="#FFFFFF" />
             </svg>
             <span className="font-display font-extrabold text-xl tracking-tight text-navy">unex</span>
           </a>
