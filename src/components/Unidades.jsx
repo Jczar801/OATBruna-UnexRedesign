@@ -1,8 +1,8 @@
 import { MapPin } from "lucide-react";
-import imgFeira from "../assets/illustrations/unidade-feira-de-santana.svg";
-import imgItabuna from "../assets/illustrations/unidade-itabuna.svg";
-import imgJequie from "../assets/illustrations/unidade-jequie.svg";
-import imgConquista from "../assets/illustrations/unidade-vitoria-da-conquista.svg";
+import imgFeira from "../assets/illustrations/foto-unidade-feira-de-santana.jpg";
+import imgItabuna from "../assets/illustrations/foto-unidade-itabuna.jpg";
+import imgJequie from "../assets/illustrations/foto-unidade-jequie.jpg";
+import imgConquista from "../assets/illustrations/foto-unidade-vitoria-da-conquista.jpg";
 
 const UNIDADES = [
   { cidade: "Feira de Santana", cursos: 12, img: imgFeira },
