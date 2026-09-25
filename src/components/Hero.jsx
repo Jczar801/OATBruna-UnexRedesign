@@ -1,5 +1,5 @@
 import { ArrowRight } from "lucide-react";
-import heroImg from "../assets/illustrations/hero.svg";
+import heroImg from "../assets/illustrations/hero-unex-banner.jpg";
 
 const ATALHOS = [
   { label: "Usar nota do Enem", href: "#servicos" },
@@ -40,10 +40,10 @@ export default function Hero() {
         </div>
 
         <div className="relative">
-          <div className="aspect-[4/5] rounded-2xl bg-navy-soft border border-white/10 overflow-hidden">
+          <div className="aspect-[2/1] rounded-2xl bg-navy-soft border border-white/10 overflow-hidden">
             <img
               src={heroImg}
-              alt="Ilustração de formatura na Unex, com estudantes em beca em frente ao campus"
+              alt="Marca Unex — sempre em evolução"
               className="w-full h-full object-cover"
             />
           </div>
